@@ -115,7 +115,17 @@ The second test examined whether missingness depends on `OUTAGE.DURATION`. Using
 
 ## Hypothesis Testing
 
+**Null Hypothesis:** The mean outage duration is the same before and after 2010. Any observed difference is due to random chance.
 
+**Alternative Hypothesis:** The mean outage duration after 2010 is different from before 2010.
+
+**Test Statistic:** Difference in group means. 
+
+**Significance Level:** 0.05
+
+**Result:** The observed difference in mean outage duration before and after 2010 was computed and compared against 10,000 permutations of shuffled group labels. The resulting p-value was 0.0000, meaning none of the 10,000 simulated differences were as extreme as the one observed in the real data.
+
+**Conclusion:** At the 0.05 significance level, we reject the null hypothesis. The difference in mean outage duration before and after 2010 is unlikely to be due to random chance alone. 
 
 ---
 
