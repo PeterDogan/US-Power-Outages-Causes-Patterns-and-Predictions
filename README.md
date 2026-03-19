@@ -90,7 +90,26 @@ This heatmap shows the count of outages by cause category for each year. Severe 
 
 ## Assessment of Missingness
 
+### MNAR
 
+The `CUSTOMERS.AFFECTED` column is likely **MNAR**. The number of customers affected is most likely to go unreported when the outage was minor or localized, meaning the very outages with low customer impact are the ones least likely to have that impact recorded. The missingness therefore depends on the value of the missing data itself. To make this column MAR instead, additional data about the reporting practices of each utility company would be needed, such as whether smaller utilities systematically under-report customer counts or whether certain states have weaker reporting requirements.
+
+### Missingness
+
+To analyze the missingness of `CUSTOMERS.AFFECTED`, two permutation tests are performed.
+
+The first test examined whether missingness depends on `CAUSE.CATEGORY`. Using TVD as the test statistic, the observed TVD between the cause distributions when `CUSTOMERS.AFFECTED` is missing versus not missing was compared against 1,000 permutations of shuffled missingness labels.
+
+The second test examined whether missingness depends on `OUTAGE.DURATION`. Using absolute difference in means as the test statistic, the mean duration when `CUSTOMERS.AFFECTED` is missing was compared to when it is not missing.
+
+<iframe
+  src="assets/missingness.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
+
+`CAUSE.CATEGORY` yielded a p-value of 0.000, and the test against `OUTAGE.DURATION` yielded a p-value of 0.1710. 
 
 ---
 
