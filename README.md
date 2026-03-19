@@ -81,6 +81,7 @@ While severe weather consistently dominates as the leading cause of outages acro
 ></iframe>
 
 This heatmap shows the count of outages by cause category for each year. Severe weather is consistently the darkest column across all years, but intentional attacks become notably more frequent from 2011 onward.
+
 ---
 
 
