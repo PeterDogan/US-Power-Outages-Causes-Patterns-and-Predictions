@@ -107,7 +107,7 @@ The second test examined whether missingness depends on `OUTAGE.DURATION`. Using
   frameborder="0"
 ></iframe>
 
-The missingness of `CUSTOMERS.AFFECTED` depends on `CAUSE.CATEGORY` yielded a p-value of 0.000, and the test against `OUTAGE.DURATION` yielded a p-value of 0.1710. 
+The missingness of `CUSTOMERS.AFFECTED` depends on `CAUSE.CATEGORY` which yielded a p-value of 0.000, and the test against `OUTAGE.DURATION` yielded a p-value of 0.1710. 
 
 ---
 
