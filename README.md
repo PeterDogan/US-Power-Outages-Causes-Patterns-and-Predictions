@@ -1,5 +1,3 @@
-# U.S. Power Outages: Causes, Patterns, and Predictions
-
 **By Peter Dogan**
 
 ---
@@ -82,8 +80,7 @@ While severe weather consistently dominates as the leading cause of outages acro
   frameborder="0"
 ></iframe>
 
-This heatmap shows the count of outages by cause category for each year. Severe weather is consistently the darkest column across all years, but intentional attacks become notably more frequent from 2011 onward.ows the count of outages by cause category for each year. Severe weather is consistently the darkest column across all years, but intentional attacks become notably more frequent from 2011 onward.
-
+This heatmap shows the count of outages by cause category for each year. Severe weather is consistently the darkest column across all years, but intentional attacks become notably more frequent from 2011 onward.
 ---
 
 
@@ -109,7 +106,7 @@ The second test examined whether missingness depends on `OUTAGE.DURATION`. Using
   frameborder="0"
 ></iframe>
 
-`CAUSE.CATEGORY` yielded a p-value of 0.000, and the test against `OUTAGE.DURATION` yielded a p-value of 0.1710. 
+The missingness of `CUSTOMERS.AFFECTED` depends on `CAUSE.CATEGORY` yielded a p-value of 0.000, and the test against `OUTAGE.DURATION` yielded a p-value of 0.1710. 
 
 ---
 
@@ -198,7 +195,7 @@ outages, particularly for severe weather events.
 A Random Forest Regressor was chosen over Linear Regression because outage duration 
 has a non-linear relationship with its predictors. A linear model can't explain 
 interactions between cause category and seasonal conditions exactly where a random forest 
-functions.
+excels.
 
 Hyperparameters were tuned using GridSearchCV with 3-fold cross validation. The best 
 parameters found were a max depth of 10, a minimum samples per leaf of 5, and 100 
