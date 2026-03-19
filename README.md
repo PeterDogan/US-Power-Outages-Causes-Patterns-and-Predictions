@@ -42,6 +42,7 @@ The following cleaning steps were performed:
 **Recomputing percentage columns:** Several columns storing customer percentage breakdowns contained raw Excel formula strings rather than computed values. 
 
 Here are the first few rows of the cleaned DataFrame:
+
 | YEAR | MONTH | U.S._STATE | CAUSE.CATEGORY | OUTAGE.DURATION | CUSTOMERS.AFFECTED |
 |-----:|------:|:-----------|:---------------|----------------:|-------------------:|
 | 2011 | 7 | Minnesota | severe weather | 3060 | 70000 |
