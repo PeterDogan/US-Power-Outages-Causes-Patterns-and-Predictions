@@ -1,5 +1,67 @@
-# US-Power-Outages-Causes-Patterns-and-Predictions
-Project for DSC80, Practice and Application of Data Science
+# U.S. Power Outages: Causes, Patterns, and Predictions
+
+**By Peter Dogan**
+
+---
+
+## Introduction
 
 
-Testing git pushing
+
+---
+
+## Data Cleaning
+
+
+
+---
+
+## Univariate Analysis
+
+
+
+---
+
+## Bivariate Analysis
+
+
+
+---
+
+## Interesting Aggregates
+
+
+
+---
+
+## Assessment of Missingness
+
+
+
+---
+
+## Hypothesis Testing
+
+
+
+---
+
+## Framing a Prediction Problem
+
+
+
+---
+
+## Baseline Model
+
+
+
+---
+
+## Final Model
+
+
+
+---
+
+## Fairness Analysis
