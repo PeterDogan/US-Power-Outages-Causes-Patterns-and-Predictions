@@ -33,13 +33,13 @@ The raw Excel file contained 5 rows of metadata before the actual column headers
 
 The following cleaning steps were performed:
 
-**Combining date and time columns:** The dataset stored outage start and restoration times as separate date and time columns. These were combined into two proper datetime columns, `OUTAGE.START` and `OUTAGE.RESTORATION`, and the original split columns were dropped.
+**Combining date and time columns:** The dataset stored outage start and restoration times as separate date and time columns. These were combined into two proper datetime columns, `OUTAGE.START` and `OUTAGE.RESTORATION`.
 
-**Replacing zeros with NaN:** Values of 0 in `OUTAGE.DURATION`, `CUSTOMERS.AFFECTED`, and `DEMAND.LOSS.MW` were replaced with NaN. A duration of 0 minutes indicates either an instantaneous event or a missing value rather than a true observation, and treating it as a real value would skew any analysis of outage severity.
+**Replacing zeros with NaN:** Values of 0 in `OUTAGE.DURATION`, `CUSTOMERS.AFFECTED`, and `DEMAND.LOSS.MW` were replaced with NaN.
 
-**Fixing column types:** The `MONTH` column was cast to a nullable integer since it contained NaN values that prevented it from being stored as a standard integer.
+**Fixing column types:** The `MONTH` column was cast to a nullable integer since it contained NaN values.
 
-**Recomputing percentage columns:** Several columns storing customer percentage breakdowns contained raw Excel formula strings rather than computed values. These were recalculated directly from the source columns.
+**Recomputing percentage columns:** Several columns storing customer percentage breakdowns contained raw Excel formula strings rather than computed values. 
 
 Here are the first few rows of the cleaned DataFrame:
 | YEAR | MONTH | U.S._STATE | CAUSE.CATEGORY | OUTAGE.DURATION | CUSTOMERS.AFFECTED |
@@ -50,6 +50,38 @@ Here are the first few rows of the cleaned DataFrame:
 | 2012 | 6 | Minnesota | severe weather | 2550 | 68200 |
 | 2015 | 7 | Minnesota | severe weather | 1740 | 250000 |
 
+### Univariate Analysis
+
+<iframe
+  src="assets/cause-count.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
+
+Severe weather is the most common cause of major outages, accounting for nearly half of all events in the dataset. Intentional attacks are the second most frequent cause, with all other categories occurring far less often.
+
+### Bivariate Analysis
+
+<iframe
+  src="assets/cause-proportion.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
+
+While severe weather consistently dominates as the leading cause of outages across all years, intentional attacks grow substantially as a proportion of outages from 2011 onward, suggesting a meaningful shift in the landscape of outage causes over time.
+
+### Interesting Aggregates
+
+<iframe
+  src="assets/heatmap.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
+
+This heatmap shows the count of outages by cause category for each year. Severe weather is consistently the darkest column across all years, but intentional attacks become notably more frequent from 2011 onward.ows the count of outages by cause category for each year. Severe weather is consistently the darkest column across all years, but intentional attacks become notably more frequent from 2011 onward.
 
 ---
 
